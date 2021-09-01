@@ -23,14 +23,6 @@ public class FCFS {
                 }
             }
         }
-        if (arrivalTime[0] == arrivalTime[1] && burstTime[0] > burstTime[1]) {
-            int temp = arrivalTime[0];
-            arrivalTime[0] = arrivalTime[1];
-            arrivalTime[1] = temp;
-            int temp1 = burstTime[0];
-            burstTime[0] = burstTime[1];
-            burstTime[1] = temp1;
-        }
         int completionTime[] = new int[n];
         completionTime[0] = arrivalTime[0] + burstTime[0];
         for (int i = 1; i < n; i++) {
